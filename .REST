@@ -1,0 +1,110 @@
+#### Productos
+
+GET http://192.168.1.38:8080/api/products
+###
+GET http://localhost:8080/api/products/123456
+###
+POST  http://localhost:8080/api/products
+Content-Type: application/json
+
+[
+    {
+        "title": "Producto 1",
+        "code": "001",
+        "thumbnail": "../../public/uploads/1725409053498-img-07.JPG",
+        "price": 1820000,
+        "stock": 5,
+        "category": "Línea Clásica"
+    },
+    {
+        "title": "Producto 2",
+        "code": "002",
+        "thumbnail": "../../public/uploads/1725409053498-img-08.JPG",
+        "price": 1500000,
+        "stock": 3,
+        "category": "Línea Clásica"
+    },
+    {
+        "title": "Producto 3",
+        "code": "003",
+        "thumbnail": "../../public/uploads/1725409053498-img-07.JPG",
+        "price": 2000000,
+        "stock": 8,
+        "category": "Línea Clásica"
+    },
+    {
+        "title": "Producto 4",
+        "code": "004",
+        "thumbnail": "../../public/uploads/1725409053498-img-08.JPG",
+        "price": 1820000,
+        "stock": 2,
+        "category": "Línea Moderna"
+    },
+    {
+        "title": "Producto 5",
+        "code": "005",
+        "thumbnail": "../../public/uploads/1725409053498-img-07.JPG",
+        "price": 1320000,
+        "stock": 7,
+        "category": "Línea Moderna"
+    },
+    {
+        "title": "Producto 6",
+        "code": "006",
+        "thumbnail": "../../public/uploads/1725409053498-img-08.JPG",
+        "price": 1750000,
+        "stock": 4,
+        "category": "Línea Moderna"
+    }
+]
+
+
+
+###
+PUT http://localhost:8080/products/123456
+###
+DELETE  http://localhost:8080/api/products/123456
+
+#### Carts
+
+GET http://localhost:8080/api/carts
+###
+GET http://localhost:8080/api/products/123456
+###
+POST  http://localhost:8080/api/carts
+content-Type: application/json
+
+[
+    {
+        "code": "001",
+        "cant": 5,
+    },
+    {
+        "code": "002",
+        "cant": 7,
+    },
+    {
+        "code": "003",
+        "cant": 5,
+    },
+    {
+        "code": "004",
+        "cant": 7,
+    },
+    {
+        "code": "005",
+        "cant": 5,
+    },
+    {
+        "code": "006",
+        "cant": 7
+    }
+    
+]
+
+
+
+###
+PUT http://localhost:8080/api/products/123456
+###
+DELETE  http://localhost:8080/api/products/123456
