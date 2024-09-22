@@ -2,7 +2,7 @@
 
 GET http://192.168.1.38:8080/api/products
 ###
-GET http://localhost:8080/api/products/123456
+GET http://localhost:8080/api/products/66d7a9e9deebbaa8902daa6a
 ###
 POST  http://localhost:8080/api/products
 Content-Type: application/json
@@ -67,44 +67,35 @@ DELETE  http://localhost:8080/api/products/123456
 
 #### Carts
 
-GET http://localhost:8080/api/carts
+GET http://localhost:8080/api/carts/
 ###
-GET http://localhost:8080/api/products/123456
+GET http://localhost:8080/api/carts/66efb238917d04f3347866c2
 ###
-POST  http://localhost:8080/api/carts
+POST  http://localhost:8080/api/carts/post
 content-Type: application/json
 
 [
     {
-        "code": "001",
-        "cant": 5,
-    },
-    {
-        "code": "002",
-        "cant": 7,
-    },
-    {
-        "code": "003",
-        "cant": 5,
-    },
-    {
-        "code": "004",
-        "cant": 7,
-    },
-    {
-        "code": "005",
-        "cant": 5,
-    },
-    {
-        "code": "006",
-        "cant": 7
-    }
-    
+    "code": "002",
+    "price": 1500,
+    "cant": 8
+    }    
 ]
 
 
+###
+PUT http://localhost:8080/api/carts/66efb20e917d04f3347866be
+Content-Type: application/json
+Authorization: Bearer token
+
+{
+  "code": "0500",
+  "price": 252600,
+  "cant": 7
+}
+
+
+
 
 ###
-PUT http://localhost:8080/api/products/123456
-###
-DELETE  http://localhost:8080/api/products/123456
+DELETE  http://localhost:8080/api/carts/66ef6ef4e09dc94d3e2517a2

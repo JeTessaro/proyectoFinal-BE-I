@@ -1,9 +1,10 @@
 const { Schema, model } = require('mongoose')
 const mongoosePaginate = require('mongoose-paginate-v2')
 
-
+//Creamos la collection en la BD
 const collectionName = 'products'
 
+//Creamos el esquema del producto con sus propiedades
 const productSchema = new Schema({
     title: {
         type: String,

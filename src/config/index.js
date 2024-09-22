@@ -7,6 +7,7 @@ module.exports.connectDB = async () => {
         await connect('mongodb+srv://hemy1605:101Dalmatas@cluster0.pxtmf5z.mongodb.net/c70125?retryWrites=true&w=majority&appName=Cluster0');
         console.log('Base de datos conectada');
 
+       
         // const resultado = await productModel.aggregate([
         //     {
         //         $match: {

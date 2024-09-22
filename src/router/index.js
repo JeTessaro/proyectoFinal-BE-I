@@ -6,10 +6,12 @@ const { uploader } = require('../utils/uploader.js')
 
 const router = Router()
 
+// Upload de archivos
 router.post('/',  uploader.single('myFile'), (req, res) => {
     res.send('archivo subido')
 })
 
+// Rutas API
 router.use('/', viewRouter)
 router.use('/api/products', productRouter)
 router.use('/api/carts', cartsRouter)

@@ -6,6 +6,8 @@ const {
 const router = Router();
 const productService = new ProductManagerMongo();
 
+// Obtener todos los productos
+
 router.get("/", async (req, res) => {
   try {
     const produtcs = await productService.getProducts();
@@ -15,6 +17,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+// Crear un nuevo producto
 router.post("/post", async (req, res) => {
   try {
     const { body } = req;
@@ -25,6 +28,7 @@ router.post("/post", async (req, res) => {
   }
 });
 
+// Obtener un producto por ID
 router.get("/:pid", async (req, res) => {
   try {
     const productId = req.params.pid;
@@ -49,6 +53,7 @@ router.put("/:pid", async (req, res) => {
   }
 });
 
+// Actualizar un producto por ID
 router.delete("/:pid", async (req, res) => {
   try {
     res.send("Delete ID de Productos");
